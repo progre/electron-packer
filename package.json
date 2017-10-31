@@ -1,0 +1,22 @@
+{
+  "name": "@progre/electron-packer",
+  "description": "Electron packer",
+  "version": "0.1.0",
+  "author": "progre <djyayutto@gmail.com>",
+  "bin": "bin/cli.js",
+  "bugs": {
+    "url": "https://github.com/progre/electron-packer/issues"
+  },
+  "homepage": "https://github.com/progre/electron-packer#readme",
+  "keywords": [
+    "electron",
+    "packer"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "git@github.com:progre/electron-packer.git",
+  "dependencies": {
+    "electron-packager": "^9.1.0",
+    "node-fetch": "^1.7.3"
+  }
+}
