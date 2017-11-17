@@ -1,7 +1,7 @@
 {
   "name": "@progre/electron-packer",
   "description": "Electron packer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "progre <djyayutto@gmail.com>",
   "bin": "bin/cli.js",
   "bugs": {
@@ -17,6 +17,7 @@
   "repository": "git@github.com:progre/electron-packer.git",
   "dependencies": {
     "electron-packager": "^9.1.0",
-    "node-fetch": "^1.7.3"
+    "node-fetch": "^1.7.3",
+    "package.root": "^1.0.3"
   }
 }

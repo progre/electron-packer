@@ -3,7 +3,7 @@ const { promisify } = require('util');
 const exec = promisify(require('child_process').exec);
 const mkdir = promisify(require('fs').mkdir);
 const electronPackager = promisify(require('electron-packager'));
-const package = require('./package.json');
+const { package } = require('package.root');
 const appName = package.name;
 const electronVersion = package.devDependencies.electron.slice(1);
 
