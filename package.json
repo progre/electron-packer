@@ -1,7 +1,7 @@
 {
   "name": "@progre/electron-packer",
   "description": "Electron packer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "progre <djyayutto@gmail.com>",
   "bin": "bin/cli.js",
   "bugs": {
