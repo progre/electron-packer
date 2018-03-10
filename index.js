@@ -8,15 +8,15 @@ const appName = package.name;
 const electronVersion = package.devDependencies.electron.slice(1);
 
 mkdir('tmp').catch(errorHandler)
-  .then(() => mkdir('tmp/dest').catch(errorHandler))
-  .then(() => exec('cp -r lib/ tmp/dest/lib').then(printStdout))
-  .then(() => exec('cp LICENSE tmp/dest/').then(printStdout))
-  .then(() => exec('cp package.json tmp/dest/').then(printStdout))
-  .then(() => exec('cp README*.md tmp/dest/').then(printStdout))
-  .then(() => exec('npm install --production', { cwd: 'tmp/dest' }).then(printStdout))
-  .then(() => execPackageAndZip(electronVersion, 'tmp', 'dest', 'darwin', 'x64', 'src/res/icon.icns'))
-  .then(() => execPackageAndZip(electronVersion, 'tmp', 'dest', 'win32', 'ia32', 'src/res/icon_256.ico'))
-  .then(() => execPackageAndZip(electronVersion, 'tmp', 'dest', 'linux', 'x64', null));
+  .then(() => mkdir('tmp/dist').catch(errorHandler))
+  .then(() => exec('cp -r dist/ tmp/dist/dist').then(printStdout))
+  .then(() => exec('cp LICENSE tmp/dist/').then(printStdout))
+  .then(() => exec('cp package.json tmp/dist/').then(printStdout))
+  .then(() => exec('cp README*.md tmp/dist/').then(printStdout))
+  .then(() => exec('npm install --production', { cwd: 'tmp/dist' }).then(printStdout))
+  .then(() => execPackageAndZip(electronVersion, 'tmp', 'dist', 'darwin', 'x64', 'src/res/icon.icns'))
+  .then(() => execPackageAndZip(electronVersion, 'tmp', 'dist', 'win32', 'ia32', 'src/res/icon_256.ico'))
+  .then(() => execPackageAndZip(electronVersion, 'tmp', 'dist', 'linux', 'x64', null));
 
 function execPackageAndZip(version, cwd, path, platform, arch, icon) {
   const os = (() => {
